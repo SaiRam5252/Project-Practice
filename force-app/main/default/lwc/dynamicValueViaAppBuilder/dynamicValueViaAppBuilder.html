@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Dynamic Value Through App Builder." icon-name="standard:contact">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr class="slds-line-height_reset slds-text-title_caps">
+                    <th class="slds-is-resizable" scope="col">
+                        <div class="slds-truncate" title="Name">
+                                Name
+                        </div>
+                    </th>                    
+                    <th class="slds-is-resizable" scope="col">
+                        <div class="slds-truncate" title="Phone">
+                                Phone
+                        </div>
+                    </th>
+                    <th class="slds-is-resizable" scope="col">
+                        <div class="slds-truncate" title="Email">
+                                Email
+                        </div>
+                    </th>            
+                    <th class="slds-is-resizable" scope="col">
+                        <div class="slds-truncate" title="Do Not Call">
+                                Do Not Call
+                        </div>
+                    </th>        
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={data} for:item="c">
+                    <tr key={c.Id}>
+                        <th data-label="Name" scope="row">
+                            <div class="slds-truncate" title={c.Name}>
+                                {c.LastName}
+                            </div>
+                        </th>
+                        <th data-label="Phone" scope="row">
+                            <div class="slds-truncate" title={c.Phone}>
+                                {c.Phone}
+                            </div>
+                        </th>
+                        <th data-label="Email" scope="row">
+                            <div class="slds-truncate" title={c.Email}>
+                                {c.Email}
+                            </div>
+                        </th>
+                        <th data-label="DoNotCall" scope="row">
+                            <div class="slds-truncate" title={c.DoNotCall}>
+                                {c.DoNotCall}
+                            </div>
+                        </th>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

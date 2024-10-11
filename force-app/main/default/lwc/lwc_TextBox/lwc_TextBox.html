@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="LWC with Flow" icon-name="custom: custom3">
+        <div class="slds-m-around-medium">
+            <lightning-input label="Message to Send" type="text" onchange={handleChange} name="msgToSend">
+            </lightning-input>
+            <br/>
+            <lightning-button label="Publish Attribute" onclick={handleClick}></lightning-button>
+            <lightning-button label="Navigate to Next" variant="brand" onclick={handleNext}></lightning-button>
+        </div>
+    </lightning-card>    
+</template>
